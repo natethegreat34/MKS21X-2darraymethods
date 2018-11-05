@@ -14,7 +14,7 @@ public class ArrayMethods{
 
    public static int columnSum(int[][] ary, int x){
      int sum = 0;
-     for (int i = 0; i < ary[x].length; i ++){
+     for (int i = 0; i < ary.length; i ++){
        if (ary[i].length > x){
        sum = sum + ary [i] [x];
      }
@@ -48,7 +48,7 @@ public class ArrayMethods{
     }
 
     public static int[] allColSums(int[][] ary){
-      int [] ah = new int [ary.length];
+      int [] ah = new int [longestcol(ary)];
         for (int i = 0; i < longestcol(ary); i ++){
           ah[i] = columnSum(ary, i);
         }
