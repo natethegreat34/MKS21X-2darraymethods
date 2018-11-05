@@ -64,9 +64,25 @@ public class ArrayMethods{
    /*
    *PART 3 - use prior methods where appropriate
    */
-   //public static boolean isRowMagic(int[][] ary){}
+   public static boolean isRowMagic(int[][] ary){
+int [] rsum = allRowSums(ary);
+     for (int i = 0; i + 1 < rsum.length; i ++){
+       if (rsum [i] == rsum[i+1]){
+         }
+         else { return false;}
+     }
+     return true;
+   }
      //checks if the array is row-magic (this means that every row has the same row sum).
 
-   //public static boolean isColumnMagic(int[][] ary){}
+   public static boolean isColumnMagic(int[][] ary){
+     int [] csum = allColSums(ary);
+     for (int i = 0; i + 1 < csum.length; i ++){
+       if (csum [i] == csum[i+1]){
+         }
+         else { return false;}
+     }
+     return true;
+   }
+   }
     //checks if the array is column-magic (this means that every column has the same column sum).
-}
